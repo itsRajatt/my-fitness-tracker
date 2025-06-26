@@ -1,0 +1,42 @@
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+const AppHeader = React.lazy(() => import("./components/AppHeader"));
+const HomeContainer = React.lazy(() => import("./containers/HomeContainer"));
+const ExerciseContainer = React.lazy(() =>
+  import("./containers/ExerciseContainer")
+);
+import "./index.css";
+import FallbackLoader from "./components/FallbackLoader";
+
+function App() {
+  return (
+    <Suspense fallback={<FallbackLoader />}>
+      <Router>
+        <AppHeader />
+        <div className="app-content-scrollable">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Suspense fallback={<FallbackLoader />}>
+                  <HomeContainer />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/exercises"
+              element={
+                <Suspense fallback={<FallbackLoader />}>
+                  <ExerciseContainer />
+                </Suspense>
+              }
+            />
+            <Route path="/profile" element={<></>} />
+          </Routes>
+        </div>
+      </Router>
+    </Suspense>
+  );
+}
+
+export default App;
