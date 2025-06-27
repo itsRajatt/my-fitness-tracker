@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import ExerciseCard from "../components/ExerciseCard";
+import ExerciseCard from "../components/exercises/ExerciseCard";
 import { fetchExercises } from "../api/exerciseApi";
 import styles from "./ExerciseContainer.module.css";
-import FallbackLoader from "../components/FallbackLoader";
+import FallbackLoader from "../components/common/FallbackLoader";
 
 export default function ExerciseContainer() {
   const [data, setData] = useState([]);

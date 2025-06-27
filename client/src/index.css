@@ -4,6 +4,7 @@
   font-weight: 400;
 
   color: rgba(255, 255, 255, 0.87);
+  background: rgba(116, 115, 117, 0.6);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -42,7 +43,8 @@
   display: none;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -58,7 +60,6 @@ body {
   height: calc(100vh - 110px);
   overflow-y: auto;
 }
-
 
 header {
   position: sticky;

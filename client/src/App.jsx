@@ -1,12 +1,12 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-const AppHeader = React.lazy(() => import("./components/AppHeader"));
+const AppHeader = React.lazy(() => import("./components/common/AppHeader"));
 const HomeContainer = React.lazy(() => import("./containers/HomeContainer"));
 const ExerciseContainer = React.lazy(() =>
   import("./containers/ExerciseContainer")
 );
 import "./index.css";
-import FallbackLoader from "./components/FallbackLoader";
+import FallbackLoader from "./components/common/FallbackLoader";
 
 function App() {
   return (
