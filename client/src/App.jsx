@@ -7,6 +7,8 @@ const ExerciseContainer = React.lazy(() =>
 );
 import "./index.css";
 import FallbackLoader from "./components/common/FallbackLoader";
+import AppFooter from "./components/common/AppFooter";
+import About from "./components/common/About";
 
 function App() {
   return (
@@ -31,9 +33,10 @@ function App() {
                 </Suspense>
               }
             />
-            <Route path="/profile" element={<></>} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </div>
+        <AppFooter />
       </Router>
     </Suspense>
   );

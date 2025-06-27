@@ -43,21 +43,15 @@
   display: none;
 }
 
-html,
-body {
+html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
 
 .app-content-scrollable {
-  height: calc(100vh - 110px);
+  flex: 1 0 auto;
   overflow-y: auto;
 }
 
@@ -65,4 +59,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+footer {
+  flex-shrink: 0;
 }
